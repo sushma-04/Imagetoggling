@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Toggle</title>
+    <!-- css -->
+    <style>
+        button {
+            background-color: rgb(219, 16, 158);
+            height: 50px;
+            width: 100px;
+            color: aliceblue;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="1.jpeg" alt="image1" id="image1" height="400px">
+    <button id="btn">black</button> 
+
+    <!-- javascript -->
+    <script>
+        let button = document.getElementById('btn');
+        let pic = document.getElementById('image1');
+
+        document.addEventListener('click', black);
+        // function
+        function black(e) {
+            if (btn.textContent.includes('black')) {
+                pic.src = "1.jpeg"; //imge for replace
+                btn.textContent = "Next ";
+            }
+            else {
+                pic.src = "2.jpeg"; //imge for replace
+                btn.textContent = " black";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
